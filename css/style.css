@@ -1,0 +1,526 @@
+@import 'main.css';
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro|Ubuntu:700');
+
+/* GENERAL */
+
+html {
+  /*background: url(../img/background.jpg) no-repeat center center fixed;*/
+  background-size: cover;
+  height: 100%;
+  background-attachment: fixed;
+  /* To keep screen from jumping when changing pages */
+  overflow-y: scroll;
+}
+
+body {
+  background: none;
+  line-height: 1.5;
+  color: #f5f5f5;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Ubuntu', sans-serif;
+  margin-top: 0;
+}
+
+a:hover,
+a:focus,
+a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* HEADER */
+
+.header {
+  height: 65px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #1C3553;
+}
+
+.header-logo {
+  margin: 15px;
+}
+
+/* JUMBOTRON */
+
+.hero {
+  /* Changed this value to center content within
+  first col-lg-12 col */
+  max-width: 865px;
+  min-height: 922px;
+}
+
+.parallax-window {
+  background: url(../img/background.jpg) no-repeat cover;
+}
+.container .jumbotron, .container-fluid .jumbotron {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.jumbotron {
+  background: none;
+  margin-top: 280px;
+  margin-bottom: 480px;
+}
+
+.jumbotron h1 {
+  font-size: 39px;
+}
+
+.title {
+  display: block;
+}
+
+.underline {
+  display: inline-block;
+  position: relative;
+}
+
+/* Makes underline on jumbotron h1 */
+.underline:before {
+  background-color: #fff;
+  bottom: -15px;
+  content: '';
+  height: 2px;
+  left: 0;
+  position: absolute;
+  width: 110%;
+}
+
+/* Resize the underline appropriately */
+@media (max-width: 1080px) {
+  .underline:before {
+    width: 105%;
+  }
+}
+
+@media (max-width: 720px) {
+  .underline:before {
+    width: 100%;
+  }
+}
+
+.jumbotext {
+  padding-left: 0px;
+}
+
+.lead {
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+.contact-btn {
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-left: 20px;
+  /*Works in chrome but breaks hover in firefox*/
+  /*background: rgba(0, 0, 0, 0.3) !important;*/
+}
+
+.contact-chevron::after {
+    font-size: 16px;
+    font-size: 1.6rem;
+    content: '\f054';
+    font-family: 'fontawesome';
+    margin-left: 30px
+}
+
+/*Mobile rules for jumbotron*/
+@media (max-width: 992px) {
+  .jumbotron h1 {
+    font-size: 35px;
+  }
+  /*Keep hero column centered*/
+  .hero {
+    max-width: 85%;
+  }
+}
+
+@media (max-width: 768px) {
+  .jumbotron {
+    /*Hi, my name...*/
+    margin-top: 1em;
+    margin-bottom: 0px;
+  }
+  .jumbotron h1 {
+    font-size: 30px;
+  }
+  .jumbotron .lead {
+    font-size: 18px;
+  }
+  /*Over-ride bootstrap margin on column*/
+  .contact-btn {
+    margin-left: -15px;
+  }
+  /*Controls height of hero/background picture*/
+  .hero {
+    min-height: 500px;
+  }
+}
+
+/* ABOUT */
+
+#about {
+  background: #1C3553;
+  padding: 70px 15px 75px 15px;
+}
+
+.about-text {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  text-align: justify;
+}
+
+.about-title.underline:before {
+  width: 40px;
+}
+
+.about-p {
+  padding-top: 25px;
+}
+
+/* WORK EXAMPLES */
+
+#work {
+  background-color: #142e44;
+  padding: 15px;
+  overflow: hidden;
+}
+
+figure.portfolio-item {
+  margin-top: 30px;
+}
+
+.img-responsive {
+  margin: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  /*bootstrap img-responsive class
+  sets max width to 100%, not allowing
+  img to be larger than actual dimensions */
+  width: 100%;
+  border-radius: 5px;
+}
+
+p.description {
+  text-align: center;
+  text-transform: uppercase;
+  /*font-family: 'Ubuntu';*/
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* work boxes below 768px */
+@media (max-width: 768px) {
+  figure.portfolio-item {
+    padding: 0px;
+  }
+}
+
+
+/* SKILLS */
+
+#skills {
+  background: #1C3553;
+  padding: 70px 15px 75px 15px;
+  clear: top;
+}
+
+.skills-text {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #1c3553;
+  font-size: 20px;
+}
+
+.skills-title {
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.skills-title.underline:before {
+  width: 40px;
+}
+
+.skills-list {
+  overflow: hidden;
+  position: relative;
+  z-index: 10
+}
+
+.skill-name:after {
+  background-color: #999797;
+  content: '';
+  display: block;
+  height:1rem;
+  position: relative;
+  top: 3px;
+  width: 100%;
+}
+
+.skill-percent {
+  font-size: 0;
+  height: 1rem;
+  position: relative;
+  top: -.8rem;
+  -webkit-transition: 3s linear;
+  transition: 3s linear;
+  width: 0;
+}
+
+/* SKILL BAR COLORS */
+.skill-percent-html {
+  background-color: #FF5C00;
+}
+.skill-percent-css {
+  background-color: #00B1DB;
+}
+.skill-percent-jquery {
+  background-color: #FFC100;
+}
+.skill-percent-scss {
+  background-color: #FF768E;
+}
+.skill-percent-javascript {
+  background-color: #FF8B00;
+}
+.skill-percent-wordpress {
+  background-color: #0073b0;
+}
+.skill-percent-php {
+  background-color: #464c99;
+}
+.skill-percent-git {
+  background-color: #ff5c00;
+}
+
+/* CONTACT */
+
+#contact {
+  background-color: #142e44;
+  padding: 70px 15px 75px 15px;
+}
+
+.contact-container {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-title.underline:before {
+  width: 40px;
+}
+
+.contact-form {
+  padding-top: 40px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.contact-form input:not([type="submit"]):not([type="reset"]),
+.contact-form textarea {
+  font-size: 18px;
+  font-size: 1.8rem;
+  background-color: #1C3553;
+  border: 1px solid transparent;
+  color: #fff;
+  padding: 20px;
+  -webkit-transition: border-color .3s;
+  transition: border-color .3s;
+  width: 100%;
+}
+
+.contact-form input:not([type="submit"]):not([type="reset"]):focus,
+.contact-form textarea:focus {
+  border-color: #2196F3;
+}
+
+.contact-form input {
+  height: 60px;
+}
+
+.contact-form textarea {
+  height: 200px;
+}
+
+.form-field {
+  margin-bottom: 20px;
+  padding-left: 0px;
+}
+
+.btn {
+    background: none;
+    border: 2px solid transparent;
+    display: inline-block;
+    padding: 10px 20px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-transition: background-color .3s, color .3s;
+    transition: background-color .3s, color .3s;
+    margin-right: 15px;
+}
+
+.light-button {
+  border-color: #fff;
+}
+
+.light-button:focus,
+.light-button:hover {
+  background-color: #fff;
+  color: #2196F3;
+}
+
+.dark-button {
+  border-color: #2196F3;
+}
+
+.dark-button:focus,
+.dark-button:hover {
+  background-color: #2196F3;
+  color: #fff;
+}
+
+/* FOOTER */
+
+.site-footer {
+  background-color: #142e44;
+  border-top: 1px solid #fff;
+  width: 100%;
+  overflow: hidden;
+}
+
+.footer-box {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.social-icons {
+  /* Make the icons go horizontal! */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  float: left;
+}
+
+.copyright {
+  float: right;
+  height: 4rem;
+  margin: 2rem 1rem 0rem 1rem;
+  font-size: 25px;
+}
+
+.social-icons a {
+  margin-top: 1rem;
+}
+
+@media (max-width: 490px) {
+  .social-icons {
+    margin-left: 3.5rem;
+  }
+  .copyright {
+    clear: left;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    text-align: center;
+  }
+}
+
+/* Adds margin-left to every icon except
+the first one */
+.social-icons_codepen:not(:first-child),
+.social-icons_github:not(:first-child),
+.social-icons_linked-in:not(:first-child) {
+    margin-left: 1rem;
+}
+
+.social-icons_codepen,
+.social-icons_github,
+.social-icons_linked-in {
+    font-size: 0px;
+    font-size: 0rem;
+    background-color: #fff;
+    border-radius: 50%;
+    display: block;
+    height: 4rem;
+    position: relative;
+    text-decoration: none;
+    width: 4rem;
+}
+
+/*The Long Sought After Hover Effect*/
+.social-icons_codepen:hover::after,
+.social-icons_github:hover::after,
+.social-icons_linked-in:hover::after {
+    color: #2196F3;
+    /*moves the icons up and left,
+    note: left from orig. pos. (as in
+    place where they were before transform
+    down below)*/
+    -webkit-transform: translate(-50%, -60%);
+            transform: translate(-50%, -60%);
+}
+
+.social-icons_codepen::after,
+.social-icons_github::after,
+.social-icons_linked-in::after {
+  font-size: 36px;
+  font-size: 2.25rem;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  color: #142e44;
+  /*Moves the icons to center of circle*/
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  /*Controls speed of transfrom and color
+  change when hovered*/
+  -webkit-transition: color 0.3s, -webkit-transform 0.3s;
+  transition: color 0.3s, -webkit-transform 0.3s;
+  transition: color 0.3s, transform 0.3s;
+  transition: color 0.3s, transform 0.3s, -webkit-transform 0.3s;
+}
+
+.social-icons_codepen::after {
+  content: '\f1cb';
+  font-family: 'fontawesome';
+}
+
+.social-icons_github::after {
+  content: '\f113';
+  font-family: 'fontawesome';
+}
+
+.social-icons_linked-in::after {
+  content: '\f0e1';
+  font-family: 'fontawesome';
+}
